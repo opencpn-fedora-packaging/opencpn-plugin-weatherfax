@@ -4,10 +4,10 @@
 %global project weatherfax_pi
 %global plugin weatherfax
 
-Name: opencpn-plugin-weatherfax
+Name: opencpn-plugin-%{plugin}
 Summary: Weatherfax plugin for OpenCPN
-Version: 0.0
-Release: 0.1.%{shortcommit}%{?dist}
+Version: 1.7.001
+Release: 1.%{shortcommit}%{?dist}
 License: GPLv2+
 
 Source0: https://github.com/%{owner}/%{project}/archive/%{commit}/%{project}-%{shortcommit}.tar.gz
@@ -22,7 +22,7 @@ BuildRequires: wxGTK3-devel
 BuildRequires: zlib-devel
 
 Requires: opencpn%{_isa}
-Supplements: opencpn%{_isa}
+Enhances: opencpn%{_isa}
 
 %description
 Weather fax plugin for OpenCPN. This includes retrieval
